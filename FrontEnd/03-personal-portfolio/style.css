@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fuzzy Bubbles";
+}
+
+body{
+  background-color: #fdfdfd;
+}
+
+.container{
+  display: grid;
+}
+
+.header{
+  display: flex ;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  border-bottom: 2px solid black;
+  box-shadow: 1px 1px 0.8px black;
+}
+
+.logo-webname-container{
+  display: flex;
+  gap: 30px;
+}
+
+.nav{
+  display: flex;
+  gap: 20px;
+}
+
+a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
