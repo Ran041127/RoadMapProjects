@@ -8,7 +8,7 @@
 body{
   background-color: #fdfdfd;
   padding-top: 73px;
-  height: 100vh;
+  height: 1500px;
 }
 
 .header{
@@ -47,7 +47,7 @@ a{
   display: grid;
   height: 100%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr 3fr;
   grid-template-areas:
   "homepage homepage homepage"
   "projects work-experience education"
@@ -58,7 +58,6 @@ a{
 }
 .homepage{
   grid-area: homepage;
-  background-color: beige;
   border: 2px solid black;
   display: flex;
   justify-content: center;
@@ -66,38 +65,67 @@ a{
   flex-direction: column;
 }
 
-.profession{
+.title{
   font-size: 50px;
   font-weight: bolder;
 }
 
+.title2{
+  font-size: 40px;
+  font-weight: bolder;
+  padding-left: 30px;
+}
+
+#resume {
+  padding: 10px 10px;
+  background-color: #fdfdfd;
+  font-weight: bolder;
+  margin-top: 10px;
+  transition: background-color 0s;
+}
+
+#resume:active{
+  background-color: black;
+  color: white;
+}
 .projects{
   grid-area: projects;
-  background-color: antiquewhite;
   border: 2px solid black;
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+  row-gap: 10px;
+  padding-top: 20px;
 }
+
+.prj-title{
+  border-bottom: 3px solid black;
+  padding-left: 30px;
+  align-content: center;
+}
+
 
 .work-experience{
   grid-area: work-experience;
-  background-color: aqua;
   border: 2px solid black;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
 }
 
 .education{
   grid-area: education;
-  background-color: aquamarine;
   border: 2px solid black;
 }
 
 .open-source{
   grid-area: opensource;
-  background-color: bisque;
   border: 2px solid black;
 }
 
 .reviews{
   grid-area: reviews;
-  background-color: blanchedalmond;
   border: 2px solid black;
 }
 
