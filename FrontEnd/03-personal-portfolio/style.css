@@ -1,198 +1,364 @@
+/* GENERAL */
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Fuzzy Bubbles";
 }
 
 body{
   background-color: #fdfdfd;
-  padding-top: 70px;
-  height: 1500px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  
+}
+
+/* HEADER */
 .header{
-  display: flex ;
-  justify-content: space-around;
+  flex: 0 0 90px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 70px;
-  background-color: #fdfdfd;
+  padding: 0 20px 0 20px;
 }
 
 .logo-webname-container{
   display: flex;
   align-items: center;
-  gap: 20px;
-  
+  gap: 10px;
 }
-
 .nav{
   display: flex;
   gap: 20px;
 }
-
-a{
-  font-size: 20px;
-  text-decoration: none;
+.nav a{
+  font-size: 25px;
   color: black;
+  transition: all 0.25s ease;
 }
 
-.main-container{
-  display: grid;
-  height: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 3fr 1fr 1fr 2fr;
-  grid-template-areas:
-  "homepage homepage homepage"
-  "projects work-experience education"
-  "projects opensource education"
-  "reviews reviews reviews";
+.nav a:hover{
+  font-weight: bolder;
 }
-.homepage{
-  grid-area: homepage;
-  border-bottom: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+@media screen and (max-width: 800px) {
+    .header{
+    flex: 0 0 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-webname-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav a{
+  font-size: 15px;
+  }
+}
+
+/* MAIN */
+.main{
+  flex: 8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr 1fr 2fr ;
+  grid-template-areas: 
+  "welcome welcome welcome"
+  "project work education"
+  "project opensource education"
+  "review review review";
+
 }
 
 .title{
-  font-size: 50px;
-  font-weight: bolder;
-}
-
-.title2{
-  font-size: 40px;
-  font-weight: bolder;
-  padding-left: 30px;
+  font-size: 55px;
+  font-weight: bold;
 }
 
 .p-dsc{
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 20px;
+  color: gray;
 }
 
-#resume {
-  padding: 10px 10px;
-  background-color: #fdfdfd;
-  font-weight: bolder;
-  margin-top: 10px;
-  transition: background-color 0s;
-}
-
-#resume:active{
-  background-color: black;
-  color: white;
-}
-.projects{
-  grid-area: projects;
-  border: 2px solid black;
-  display: grid;
-  grid-template-rows: 50px 50px 50px 50px;
-  row-gap: 10px;
-  padding-top: 20px;
-}
-
-.prj-title{
-  border-bottom: 3px solid black;
-  padding-left: 30px;
-  align-content: center;
-}
-
-
-.work-experience{
-  grid-area: work-experience;
-  border: 2px solid black;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.welcome-section{
+  grid-area: welcome;
+  border-bottom: 1px solid black ;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.we-dscp{
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.ext-link{
-  color: blue;
-  transition: text-decoration 0s;
-}
-
-.ext-link:hover{
-  text-decoration: underline;
-}
-
-.open-source{
-  grid-area: opensource;
-  border: 2px solid black;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.education{
-  grid-area: education;
-  border: 2px solid black;
-  padding-top: 20px;
-}
-
-.educ-container{
-  margin-top: 10px;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.reviews{
-  grid-area: reviews;
-  border-top: 2px solid black;
-  padding-top: 20px;
-}
-
-.footer{
-  display: flex;
-  height: 50px;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-
-.review-container{
-  height: 90%;
-  padding: 15px 15px;
-  display: flex;
-  column-gap: 10px;
-  flex-direction: row;
-}
-
-.reviews-msg-container{
-  border: 3px solid black;
-  width: 300px;
-  height: 250px;
-  padding: 25px 25px;
-  border-radius: 50px;
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.rvw-msg{
-  text-align: justify;
-  font-size: 20px;
+.project-section{
+  grid-area: project;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 20px;
+
 }
 
-.authr-msg{
+.project-section .title{
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.project-section a{
+  font-size: 30px;
+  color: black;
+  border-bottom: 3px solid black;
+  padding-left: 20px;
+  
+}
+
+.work-experience-section{
+  grid-area: work;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 20px ;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.work-experience-section .title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.work-experience-section .p-dsc{
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.work-experience-section a{
+  color: blue;
+}
+
+.open-source-section{
+  grid-area: opensource;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0 20px;
+  gap: 20px;
+}
+
+.open-source-section .p-dsc{
+  color: black;
   font-weight: bold;
 }
+
+.open-source-section a{
+  color: blue;
+}
+
+.work-experience-section, .open-source-section a{
+  transition: all 0.5 ease;
+}
+.work-experience-section a:hover{
+  font-weight: bolder;
+}
+
+.open-source-section a:hover{
+  font-weight: bolder;
+}
+
+.education-section{
+  grid-area: education ;
+  border: 1px solid black;
+  padding: 20px 0 0 20px;
+}
+
+.education-section .title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.education-section .p-dsc{
+  color: black;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.education-section p:nth-child(3){
+  font-weight: bold;
+}
+
+.review-section{
+  grid-area: review;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0 20px;
+}
+
+.review-section .card-container{
+  flex: 1;
+  display: flex;
+}
+
+.card-container .card{
+  border: 3px solid black;
+  max-height: 200px;
+  max-width: 350px;
+  border-radius: 45px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card .authr-msg{
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 800px) {
+  .main{
+  flex: 8;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: 
+  "welcome"
+  "project"
+  "work"
+  "opensource"
+  "education"
+  "education"
+  "review";
+  }
+  .title{
+  font-size: 35px;
+  font-weight: bold;
+  }
+
+  .p-dsc{
+    font-size: 15px;
+    text-align: center;
+  }
+  .project-section{
+    border-top: 1px solid black;
+    gap: 0px;
+    padding-top: 10px;
+  }
+
+  .project-section .title{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .project-section a{
+  flex: 1;
+  text-align: center;
+  padding-bottom: 10px;
+  background-color:  rgb(219, 219, 231);
+  border: 3px solid black;
+  border-left: none;
+  border-right: none;
+  }
+
+  .project-section :nth-child(2){
+    border-bottom: none;
+  }
+
+  .project-section :nth-child(3){
+    border-bottom: none;
+  }
+
+  .project-section :nth-child(4){
+    border-bottom: none;
+  }
+  
+  .work-experience-section{
+    padding-left: 0px;
+    padding-top: 0px;
+    gap: 0;
+    background-color: rgb(219, 219, 231);
+  }
+
+  .work-experience-section .title{
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #fdfdfd;
+    padding-top: 10px;
+  }
+
+  .work-experience-section .p-dsc{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .work-experience-section a{
+    padding-left: 30px;
+    font-size: 20px;
+  }
+
+  .open-source-section{
+    background-color: rgb(219, 219, 231);
+    padding-left: 30px;
+  }
+
+  .open-source-section .p-dsc{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .open-source-section a{
+    font-size: 20px;
+  }
+
+  .education-section{
+    padding-right: 20px;
+  }
+
+  .education-section .title{
+    text-align: center;
+
+  }
+
+  .education-section .p-dsc{
+    text-align: justify;
+    font-size: 20px;
+    
+  }
+
+  .review-section .title{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    justify-content: center;
+    align-content: center;
+  }
+
+
+}
+/* FOOTER */
+.footer{
+  flex: 0 0 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

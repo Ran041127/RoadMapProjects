@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Developer Portfolion" />
+  <meta name="author" content="Aleck Duran" />
+  <meta property="og:title" content="Frontend Developer - Aleck Duran" />
+  <meta property="og:site_name" content="Frontend Dev Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="#" />
   <title>Duran</title>
   <link rel = "stylesheet" href = "style.css">
-  <link rel = "stylesheet" href = "responsive.css">
   <link rel = "icon" href = "assets/favicon.ico" type = "image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,77 +18,62 @@
 </head>
 <body>
   <header class = "header">
-    <div class = "logo-webname-container">
-    <img src = "assets/favicon.ico" alt = "Icon">
-    <h1>Aleck Duran</h1>
-    </div>
-    <nav class = "nav">
-      <a href="">Home</a>/
-      <a href="">Project</a>/
-      <a href="">Articles</a>/
-      <a href="">Contact</a>
-    </nav>
+  <div class = "logo-webname-container">
+  <img src = "assets/favicon.ico" alt = "Icon">
+  <h1>Aleck Duran</h1>
+  </div>
+  <nav class = "nav">
+    <a href="">Home</a> /
+    <a href="">Project</a> /
+    <a href="">Articles</a> /
+    <a href="">Contact</a>
+  </nav>
   </header>
-  <main class = "main-container">
-    <section class = "homepage">
-      <p class = "title">Web Developer</p>
-      <p class = "p-dsc">I am Aleck Christian B. Duran, 3rd Year Computer Science Major</p>
-      <button id = "resume">Resume</button>
-    </section>
-    <section class = "projects">
-      <p class = "title2">Projects</p>
-      <div class = "prj-title">
-        <a href ="https://github.com/Ran041127/RoadMapProjects/tree/main/FrontEnd/01-single-page-cv">Singe Page CV</a>
-      </div>
-      <div class = "prj-title">
-        <a href = "https://github.com/Ran041127/RoadMapProjects/tree/main/FrontEnd/02-basic-html-website">Basic Html Website</a>
-      </div>
-      <div class = "prj-title">
-        <a href = "https://github.com/Ran041127/RoadMapProjects/tree/main/FrontEnd/03-personal-portfolio">Personal Portfolio</a>
-      </div>
-    </section>
-    <section class = "work-experience">
-      <p class = "title2">Work Experience</p>
-      <div class = "we-dscp">
-      <p class = "p-dsc">Currently doing some simple level projects in roadmap.sh</p>
-      <a class = "ext-link" href = "https://roadmap.sh/frontend">Visit my profile</a>
-      </div>
-    </section>
-    <section class = "open-source">
-      <p class = "title2">OpenSource Work</p>
-      <div class = "we-dscp">
-        <p class = "p-dsc">I have not contributed to any of open source projects</p>
-        <a class = "ext-link" href = "https://roadmap.sh/u/greed1127">Visit my profile</a>
-      </div>
-    </section>
-    <section class = "education">
-      <p class = "title2">Education</p>
-      <div class = "educ-container">
-        <P class = "p-dsc">I am currently studying for my undergrad degree in Computer Science. I have not participated in any Hackathons or local programming competitions.</P>
-        <p style = "font-weight: bold;" class = "p-dsc">Courses I took:</p>
-        <p class = "p-dsc">1. Fundamentals in Web Programming</p>
-        <p class = "p-dsc">2. Data Structures and Algorithm</p>
-        <p class = "p-dsc">3. Discrete Structures 1 & 2</p>
-        <p class = "p-dsc">4. Data Structures Analysis</p>
-      </div>
-    </section>
-    <article class = "reviews">
-      <p class = "title2">Reviews</p>
-      <div class ="review-container">
-        <div class = "reviews-msg-container">
-          <p class = "rvw-msg"> [Your Name] is a brilliant student that always did his best to learn as much as he could</p>
-          <p class = "authr-msg">John Doe - Assistant Professor</p>
-        </div>
-        <div class = "reviews-msg-container">
+  <main class = "main">
+  <section class = "welcome-section">
+    <p class = "title">Web Developer</p>
+    <p class = "p-dsc">I am Aleck Christian B. Duran, 3rd Year Computer Science Major</p>
+  </section>
+  <section class = "project-section">
+    <p class = "title">Projects</p>
+    <a href = "https://github.com/Ran041127/RoadMapProjects/tree/main/FrontEnd/01-single-page-cv">Singe Page CV</a>
+    <a href = "https://github.com/Ran041127/RoadMapProjects/tree/main/FrontEnd/02-basic-html-website">Basic Html Website</a>
+    <a href = "https://github.com/Ran041127/RoadMapProjects/tree/main/FrontEnd/03-personal-portfolio">Personal Portfolio</a>
+  </section>
+  <section class = "work-experience-section">
+    <p class = "title">Work Experience</p>
+    <p class = "p-dsc">Roadmap.sh</p>
+    <p class = "p-dsc">Currently doing some simple level projects in roadmap.sh</p>
+    <a href = "https://roadmap.sh/frontend">Visit my profile</a>
+  </section>
+  <section class = "open-source-section">
+    <p class = "p-dsc">OpenSource Work</p>
+    <p class = "p-dsc">I have not contributed to any of open source projects</p>
+    <a href = "https://roadmap.sh/u/greed1127">Visit my profile</a>
+  </section>
+  <section class = "education-section">
+    <p class = "title">Education</p>
+    <P class = "p-dsc">I am currently studying for my undergrad degree in Computer Science. I have not participated in any Hackathons or local programming competitions.</P>
+    <p class = "p-dsc">Courses I took:</p>
+    <p class = "p-dsc">1. Fundamentals in Web Programming</p>
+    <p class = "p-dsc">2. Data Structures and Algorithm</p>
+    <p class = "p-dsc">3. Discrete Structures 1 & 2</p>
+    <p class = "p-dsc">4. Data Structures Analysis</p>
+  </section>
+  <section class = "review-section">
+    <p class = "title">Review</p>
+    <div class = "card-container">
+        <div class = "card">
           <p class = "rvw-msg"> [Your Name] is a brilliant student that always did his best to learn as much as he could</p>
           <p class = "authr-msg">John Doe - Assistant Professor</p>
         </div>
       </div>
-    </article>
+    </div>
+  </section>
   </main>
   <footer class = "footer">
-    <p class = "p-dsc">&copy; all rights reserved 2025</p>
-    <p class = "p-dsc">I am planning to redo this project using MERN Stack</p>
+  <p class = "p-dsc">&copy; all rights reserved 2025</p>
+  <p class = "p-dsc">I am planning to redo this project using MERN Stack</p>
   </footer>
 </body>
 </html>
